@@ -8,11 +8,11 @@
     "scripts": {
         "clean:dist": "rimraf dist",
         "build": "yarn run clean:dist && node build.js",
-        "build:watch": "nodemon -e js,ts,json,html,scss --ignore dist --ignore documentation --ignore demo --ignore build -x npm run build",
+        "build:watch": "nodemon -e js,ts,json,html.css --ignore dist --ignore documentation --ignore demo --ignore build -x npm run build",
         "build:release": "npm-run-all -s doctoc build compodoc",
         "publish:dev": "yalc publish ./dist",
         "build:dev": "run-s build publish:dev",
-        "build:watch:dev": "nodemon -e js,ts,json,html,scss --ignore dist --ignore documentation --ignore demo --ignore build -x run-s build:dev",
+        "build:watch:dev": "nodemon -e js,ts,json,html.css --ignore dist --ignore documentation --ignore demo --ignore build -x run-s build:dev",
         "test": "karma start",
         "pack-and-build": "npm-run-all -s build pack-lib",
         "pack:watch": "nodemon -e js,ts,json --ignore dist --ignore documentation --ignore demo --ignore build -x npm run pack-and-build",
@@ -39,7 +39,7 @@
         "demo:install": "cd demo && yarn install",
         "demo:aot:yalc": "run-s demo:yalc && cd demo && ng build --prod",
         "demo:watch:aot:yalc": "nodemon -e ts -w src -w demo -w public_api.ts -x run-s demo:aot:yalc",
-        "demo:watch:yalc": "nodemon -e ts,scss,html -w src -w public_api.ts -d 1 -x run-s demo:yalc",
+        "demo:watch:yalc": "nodemon -e ts.css,html -w src -w public_api.ts -d 1 -x run-s demo:yalc",
         "demo:yalc": "run-s build && yalc publish dist && cd demo && yalc link @nomadreservations/ngx-stripe"
     },
     "typings": "./ngx-stripe.d.ts",
