@@ -1,12 +1,5 @@
-$ cat .gitignore
+/tmp
+/out-tsc
+/docker
+# dependencies
 /node_modules
-/dist
-/documentation
-/.vscode
-*.log
-*.tgz
-package-lock.json
-
-/build
-/.yalc
-yalc.lock
