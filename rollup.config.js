@@ -44,7 +44,7 @@ export default {
   onwarn: () => { return },
   output: {
     format: 'umd',
-    name: 'nomadreservations.ngxstripe',
+    name: 'beatbaseaps.ngxstripe',
     globals: globals,
     sourcemap: true,
     exports: 'named'

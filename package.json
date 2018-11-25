@@ -1,13 +1,13 @@
 {
-    "name": "@nomadreservations/ngx-stripe",
-    "version": "1.1.0",
+    "name": "@beatbaseaps/ngx-stripe",
+    "version": "1.0.2",
     "description": "@angular wrapper for StripeJS",
     "main": "./bundles/ngx-stripe.umd.js",
     "module": "./esm5/ngx-stripe.js",
     "es2015": "./esm2015/ngx-stripe.js",
     "scripts": {
         "clean:dist": "rimraf dist",
-        "build": "npm run clean:dist && node build.js",
+        "build": "yarn run clean:dist && node build.js",
         "build:watch": "nodemon -e js,ts,json,html,scss --ignore dist --ignore documentation --ignore demo --ignore build -x npm run build",
         "build:release": "npm-run-all -s doctoc build compodoc",
         "publish:dev": "yalc publish ./dist",
@@ -16,14 +16,14 @@
         "test": "karma start",
         "pack-and-build": "npm-run-all -s build pack-lib",
         "pack:watch": "nodemon -e js,ts,json --ignore dist --ignore documentation --ignore demo --ignore build -x npm run pack-and-build",
-        "pack-lib": "npm pack ./dist",
+        "pack-lib": "yarn pack ./dist",
         "publish-lib": "npm publish ./dist --registry=https://registry.npmjs.org/",
         "publish-lib:next": "npm publish --tag next ./dist --registry=https://registry.npmjs.org/",
         "commit": "git cz -a",
         "release": "release-it",
-        "release:major": "npm run release -- major -n",
-        "release:minor": "npm run release -- minor -n",
-        "release:patch": "npm run release -- patch -n",
+        "release:major": "yarn run release -- major -n",
+        "release:minor": "yarn run release -- minor -n",
+        "release:patch": "yarn run release -- patch -n",
         "compodoc": "compodoc -p tsconfig.json",
         "compodoc:serve": "compodoc -p tsconfig.json -sw",
         "compodoc:watch": "compodoc -p tsconfig.json -w",
@@ -46,12 +46,12 @@
     "author": "",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nomadreservations/ngx-stripe.git"
+        "url": "https://github.com/nirdshabo/ngx-stripe.git"
     },
     "bugs": {
-        "url": "https://github.com/nomadreservations/ngx-stripe/issues"
+        "url": "https://github.com/nirdshabo/ngx-stripe/issues"
     },
-    "homepage": "https://github.com/nomadreservations/ngx-stripe",
+    "homepage": "https://github.com/nirdshabo/ngx-stripe",
     "keywords": [
         "angular",
         "javascript",

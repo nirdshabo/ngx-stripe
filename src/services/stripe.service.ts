@@ -34,7 +34,7 @@ import { WindowRef } from './window-ref.service';
 @Injectable()
 export class StripeService {
   public stripeChanged$: ReplaySubject<StripeJS> = new ReplaySubject();
-  private stripe: StripeJS = {} as StripeJS;
+  public stripe: StripeJS = {} as StripeJS;
 
   constructor(
     @Inject(STRIPE_PUBLISHABLE_KEY) private key: string,
@@ -71,7 +71,9 @@ export class StripeService {
     obs.subscribe();
     return obs;
   }
-
+    public getInstance(){
+        return this.stripe;
+    }
   public elements(options?: ElementsOptions): Observable<Elements> {
     return this.stripeChanged$.pipe(map(() => this.stripe.elements(options)));
   }

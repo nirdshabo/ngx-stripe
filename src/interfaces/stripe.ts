@@ -19,6 +19,11 @@ export const STRIPE_OPTIONS = new InjectionToken<Options>('Stripe Options');
 
 export interface StripeJS {
   elements(options?: ElementsOptions): Elements;
+  handleCardPayment(secret:string,element: Element,data?:any):Promise<any>;
+  handleCardPayment(secret:string,data?:CardDataOptions):Promise<any>;
+  confirmPaymentIntent(clientSecret:string, element: Element, data?: any): Promise<any>;
+  confirmPaymentIntent(clientSecret:string, data?:any): Promise<any>;
+  retrievePaymentIntent(clientSecret:string): Promise<any>;
   createToken(el: Element, cardData?: CardDataOptions): Promise<TokenResult>;
   createToken(
     account: BankAccount,
@@ -32,4 +37,5 @@ export interface StripeJS {
 
 export interface Options {
   stripeAccount?: string;
+  betas?: any[]
 }

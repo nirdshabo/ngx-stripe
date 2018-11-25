@@ -1,5 +1,5 @@
 /**
- * @license @nomadreservations/ngx-stripe
+ * @license beatbase/ngx-stripe
  * UNLICENSED
- * Copyright © 2017 Nomad Reservatoins, LLC. All Rights Reserved
+ * Copyright © 2017 beatbase ApS, LLC. All Rights Reserved
  */
