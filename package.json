@@ -1,6 +1,6 @@
 {
     "name": "@beatbaseaps/ngx-stripe",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "@angular wrapper for StripeJS",
     "main": "./bundles/ngx-stripe.umd.js",
     "module": "./esm5/ngx-stripe.js",
